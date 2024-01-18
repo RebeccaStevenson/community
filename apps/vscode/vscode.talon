@@ -43,6 +43,7 @@ panel problems: user.vscode("workbench.panel.markers.view.focus")
 panel switch: user.vscode("workbench.action.togglePanel")
 panel terminal: user.vscode("workbench.action.terminal.focus")
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
+panel search: user.vscode("search.action.focusSearchList")
 
 # Settings
 show settings: user.vscode("workbench.action.openGlobalSettings")
@@ -244,7 +245,6 @@ terminal <number_small>: user.vscode_terminal(number_small)
 copy line down: user.vscode("editor.action.copyLinesDownAction")
 copy line up: user.vscode("editor.action.copyLinesUpAction")
 
-#Expand/Shrink AST Selection
 select less: user.vscode("editor.action.smartSelect.shrink")
 select (more | this): user.vscode("editor.action.smartSelect.expand")
 
@@ -279,3 +279,5 @@ cell run: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
+
+run script: key(ctr-shift-alt-r)

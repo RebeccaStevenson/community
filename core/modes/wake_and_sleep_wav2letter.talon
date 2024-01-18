@@ -1,5 +1,7 @@
 mode: all
 speech.engine: wav2letter
 -
-^go to sleep [<phrase>]$: speech.disable()
-^(wake up)+$: speech.enable()
+^talon sleep [<phrase>]$: speech.disable()
+^wake up [<phrase>]$: speech.disable()
+^(talon wake)+$: speech.enable()
+go to sleep: skip()

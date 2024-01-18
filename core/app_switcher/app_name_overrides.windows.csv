@@ -6,3 +6,4 @@ app, slack.exe
 lockapp, slack.exe
 pycharm, pycharm64.exe
 webstorm, webstorm64.exe
+matlab, MATLAB R2023b

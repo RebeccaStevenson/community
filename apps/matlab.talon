@@ -14,6 +14,7 @@ search in files: key(ctrl-shift-f)
 go line: key(ctrl-g)
 
 go <number>:
+    key(ctrl-shift-0)
     key(ctrl-g)
     insert("{number}")
     key(enter)
@@ -58,12 +59,12 @@ ex cope: key(ctrl-shift-space)
 assign: insert(" = ")
 eval: key(f9)
 evaluate: key(f9)
-avw [prefix]: insert("avw_")
 
 # Basic
 command window: key(ctrl-0)
 editor: key(ctrl-shift-0)
 workspace: key(ctrl-3)
+
 run:
     key(ctrl-shift-0)
     key(f5)
@@ -97,7 +98,31 @@ smart indent:
     key(ctrl-a)
     key(ctrl-i)
 
-#open variable:
-#    key(ctrl-0)
-#    insert("openvar('')")
-#    key(left:2)
+open variable [<user.text>]:
+    key(ctrl-0)
+    insert("openvar('')")
+    key(left:2)
+    insert(text or "")
+    
+open file:
+    key(ctrl-o)
+    insert(text or "")
+
+next:
+   key(alt-down)
+
+
+previous:
+    key(alt-up)
+
+next section:
+    key(ctrl-down)
+next section:
+    key(ctrl-up)
+    
+
+
+
+
+
+

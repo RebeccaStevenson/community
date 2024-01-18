@@ -4,6 +4,9 @@ app: Microsoft Excel
 # tag(): user.find_and_replace
 
 # save as excel: user.excel_save_as_format("Excel Workbook (.xlsx)")
+zoom in: key("ctrl-alt-=")
+zoom out: key("ctrl-alt--")
+
 password: key(alt-f i p e)
 
 fill down: key(ctrl-d)
@@ -89,3 +92,4 @@ pivot that: key(alt-n v t)
 ribbon: key(ctrl-f1)
 
 window (new | open): key(alt-w n)
+
