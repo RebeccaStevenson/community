@@ -24,6 +24,7 @@ _csvs = {
         "unix utilities": "unix_utilities.csv",
         "websites": "websites.csv",
         "words to replace": "words_to_replace.csv",
+        "talon notes": "talon_notes.txt"
     }.items()
 }
 _csvs["homophones"] = os.path.join(REPO_DIR, "core", "homophones", "homophones.csv")
@@ -49,7 +50,11 @@ class WinActions:
         # of file, 'edit' will fail, but 'open' always gives the user a
         # choice between applications.
         try:
-            os.startfile(path, "edit")
+
+            # Change to open with VSCode
+            subprocess.run(["code", path], check=True)
+
+            # os.startfile(path, "edit")
         except OSError:
             os.startfile(path, "open")
 

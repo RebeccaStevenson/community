@@ -10,8 +10,8 @@ next one: edit.find_next()
 # Navigation
 
 # The reason for these spoken forms is that "page up" and "page down" are globally defined as keys.
-scroll up: edit.page_up()
-scroll down: edit.page_down()
+upper: edit.page_up()
+downer: edit.page_down()
 
 go word left: edit.word_left()
 go word right: edit.word_right()
