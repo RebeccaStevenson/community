@@ -24,6 +24,7 @@ bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+bar results: user.vscode("search.action.focusSearchList")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -43,7 +44,6 @@ panel problems: user.vscode("workbench.panel.markers.view.focus")
 panel switch: user.vscode("workbench.action.togglePanel")
 panel terminal: user.vscode("workbench.action.terminal.focus")
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
-panel search: user.vscode("search.action.focusSearchList")
 
 # Settings
 show settings: user.vscode("workbench.action.openGlobalSettings")
@@ -110,7 +110,9 @@ imports fix: user.vscode("editor.action.organizeImports")
 problem next: user.vscode("editor.action.marker.nextInFiles")
 problem last: user.vscode("editor.action.marker.prevInFiles")
 problem fix: user.vscode("problems.action.showQuickFixes")
-rename that: user.vscode("editor.action.rename")
+# rename doesn't work with matlab, change to shortcut for now
+# rename that: user.vscode("editor.action.rename")
+rename that: key(ctrl-shift-l)
 refactor that: user.vscode("editor.action.refactor")
 whitespace trim: user.vscode("editor.action.trimTrailingWhitespace")
 language switch: user.vscode("workbench.action.editor.changeLanguageMode")

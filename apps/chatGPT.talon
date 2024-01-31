@@ -2,11 +2,11 @@ app: chrome
 
 -
 
-Open new chat: key(ctrl-shift-o)
-Focus chat input: key(shift-esc)
-Copy code: key(ctrl-shift-;)
-Copy last response: key(ctrl-shift-c)
+chat new: key(ctrl-shift-o)
+chat focus: key(shift-esc)
+chat copy code: key(ctrl-shift-;)
+chat copy: key(ctrl-shift-c)
 
-Set custom instructions: key(ctrl-shift-i)
-Toggle sidebar: key(ctrl-shift-s)
-Delete chat: key(ctrl-shift-backspace)
+chat custom: key(ctrl-shift-i)
+chat toggle : key(ctrl-shift-s)
+chat trash : key(ctrl-shift-backspace)
