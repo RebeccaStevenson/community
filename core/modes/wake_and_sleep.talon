@@ -14,5 +14,7 @@ mode: all
     speech.disable()
     user.engine_sleep()
 ^talon sleep [<phrase>]$: speech.disable()
+^listen to me [<phrase>]$: speech.disable()
 ^(talon wake)+$: speech.enable()
+^(stop listening)+$: speech.enable()
 go to sleep: skip()
