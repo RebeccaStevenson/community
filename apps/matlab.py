@@ -23,6 +23,7 @@ class edit_actions:
 		actions.key("ctrl-g")
 		actions.insert(str(n))
 		actions.key("enter")
+		actions.sleep("100ms")
 
 	def line_clone():
 	    actions.key("ctrl-shift-d")

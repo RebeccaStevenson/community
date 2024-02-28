@@ -6,4 +6,5 @@ app, slack.exe
 lockapp, slack.exe
 pycharm, pycharm64.exe
 webstorm, webstorm64.exe
-matlab, MATLAB R2023b
+matlab, MATLAB R2019a
+test this,C:\Program Files\MATLAB\R2019a\bin\matlab.exe
