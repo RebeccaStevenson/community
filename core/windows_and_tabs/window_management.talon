@@ -20,3 +20,18 @@ snap <user.running_applications> <user.window_snap_position>:
     user.snap_app(running_applications, window_snap_position)
 snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
+
+mat run: 
+    user.switcher_focus('matlab')
+    key(ctrl-shift-0)
+    key(f5)
+    key(ctrl-0)
+    #//TODO: run and debug mode, run line in matlab
+
+mat command: 
+    user.switcher_focus('matlab')
+    key(ctrl-0)
+
+mat editor: 
+    user.switcher_focus('matlab')
+    key(ctrl-shift-0)

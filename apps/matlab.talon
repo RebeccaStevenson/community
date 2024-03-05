@@ -61,7 +61,7 @@ eval: key(f9)
 evaluate: key(f9)
 
 # Basic
-command window: key(ctrl-0)
+command: key(ctrl-0)
 editor: key(ctrl-shift-0)
 workspace: key(ctrl-3)
 

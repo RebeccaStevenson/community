@@ -283,3 +283,27 @@ install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
 
 run script: key(ctr-shift-alt-r)
+
+#//TODO: make this automatically detect language
+# Inserts a TODO comment
+todo comment:
+    insert("//TODO: ")
+
+# Inserts an Important comment
+important comment:
+    insert("//! ")
+
+# Inserts a Question comment
+question comment:
+    insert("//? ")
+
+# Inserts a Temporary comment
+temporary comment:
+    insert("//TEMP: ")
+
+# Inserts an Information comment
+info comment:
+    insert("//* ")
+
+date: user.insert_current_date()
+date long: user.insert_current_date("%A, %B %d, %Y")

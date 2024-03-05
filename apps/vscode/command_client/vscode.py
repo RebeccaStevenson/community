@@ -104,3 +104,18 @@ class LinuxUserActions:
         # Work around bug with upper f-keys in VSCode on Linux. See
         # https://github.com/pokey/command-server/issues/9#issuecomment-963733930
         actions.key("ctrl-shift-alt-p")
+
+# # insert today's date
+# date: 
+
+# # Current date in the format YYYY-MM-DD
+# today_date = datetime.now().strftime('%Y-%m-%d')
+
+# # File path
+# file_path = '/mnt/data/todays_date.txt'
+
+# # Writing today's date to the file
+# with open(file_path, 'w') as file:
+#     file.write(today_date)
+
+# file_path
