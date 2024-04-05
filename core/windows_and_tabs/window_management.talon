@@ -22,6 +22,7 @@ snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
 
 mat run: 
+    key(ctrl-s)
     user.switcher_focus('matlab')
     key(ctrl-shift-0)
     key(f5)

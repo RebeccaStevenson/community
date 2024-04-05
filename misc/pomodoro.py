@@ -8,7 +8,7 @@ module = Module()
 
 # Additional variables for flashing control
 #//TODO: flash slower after five minutes, control with keyboard shortcut
-flash_duration = 600 * 60  # 5 minutes in seconds
+flash_duration = 2000 * 60  # 5 minutes in seconds
 flash_start_time = None
 
 lock = threading.Lock()
