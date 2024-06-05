@@ -13,7 +13,5 @@ habit edit:
     user.edit_text_file("C:\\Users\\rebec\\Dropbox\\DropboxDocuments\\notes\\habit_tracker.xlsx")
 statistics open:
     user.edit_text_file("C:\\Users\\rebec\\Dropbox\\statistics\\gelman_hill2007_data_analysis_using_regression_and_multilevel-hierarchical_models.pdf")
-
-bounce <number_small>:
-    insert(number_small)
-    key(enter)
+date: user.insert_current_date()
+date long: user.insert_current_date("%A, %B %d, %Y")

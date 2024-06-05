@@ -29,9 +29,8 @@ class ModuleActions:
         """Cancel the current "thing" - e.g. by press escape.
 
         (Note this is not meant to be the most powerful context exiting command
-        available.)
-
-        """
+        available.)"""
+        
         actions.key("escape")
 
     def opening_number_action(number: int) -> None:

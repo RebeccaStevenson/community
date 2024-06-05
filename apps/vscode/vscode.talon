@@ -305,7 +305,4 @@ temporary comment:
 info comment:
     insert("//* ")
 
-date: user.insert_current_date()
-date long: user.insert_current_date("%A, %B %d, %Y")
-
 term select: user.vscode("workbench.action.terminal.selectAll")

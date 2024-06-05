@@ -7,6 +7,12 @@ app: Microsoft Excel
 zoom in: key("ctrl-alt-=")
 zoom out: key("ctrl-alt--")
 
+go <user.letter> <user.number_string>:
+    key(ctrl-g)
+    sleep(50ms)
+    insert(letter + number_string)
+    key("enter")
+
 password: key(alt-f i p e)
 
 fill down: key(ctrl-d)
@@ -93,3 +99,30 @@ ribbon: key(ctrl-f1)
 
 window (new | open): key(alt-w n)
 
+go today: user.go_today()
+yes: 
+    insert('1')
+    key('tab')
+mark wrist exercises: user.go_column("WristEx")
+mark hand exercises: user.go_column("HandEx")
+mark top stretch: user.go_column("TopStretch")
+mark top move: user.go_column("TopMove")
+mark leg exercises: user.go_column("LegEx")
+mark ankle exercises: user.go_column("AnkleEx")
+mark lower stretch: user.go_column("LowerStretch")
+mark lower move: user.go_column("LowerMove")
+mark psoas: user.go_column("Psoas")
+mark walk: user.go_column("Walk")
+mark cardio: user.go_column("Cardio")
+mark one: user.go_column("One")
+mark wake time: user.go_column("WakeTime")
+mark work: user.go_column("Work")
+mark tired: user.go_column("Tired")
+mark stress: user.go_column("Stress")
+mark mood: user.go_column("Mood")
+
+select <user.xl_cell>: user.xl_select_cells(user.xl_cell)
+
+bounce <number_small>:
+    insert(number_small)
+    key(enter)
