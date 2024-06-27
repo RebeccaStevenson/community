@@ -1,4 +1,5 @@
 # to do
+open top result for
 focus title statistics
 is there a way to always interpret enter as a command? Why is this indented?
 make enter stop formatting
@@ -15,7 +16,7 @@ tab next: app.tab_next()
 tab (reopen | restore): app.tab_reopen()
 go tab <number>: user.tab_jump(number)
 go tab final: user.tab_final()
-
+take five block
 
 ## extension AI
 list  
@@ -101,6 +102,7 @@ wrap switch bar switch- is there a way to always interpret enter as a command? W
 - matlab semi
 
 # Cursorless
+- take five block
 - cursorless markdown: take name, item, list, section, sentence
 - clear word two
 - chuck row two past eight
@@ -134,7 +136,7 @@ wrap switch bar switch- is there a way to always interpret enter as a command? W
 - type deaf
 - inspect
 
-destination^b 
+destination
 - after
 - before
 - to

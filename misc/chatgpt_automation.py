@@ -9,7 +9,7 @@ insert = actions.insert
 key = actions.key
 sleep = actions.sleep
 
-CHATGPT_TITLE = "https://chat.openai.com/"
+CHATGPT_TITLE = "chatgpt"
 
 
 module = Module()
@@ -54,10 +54,10 @@ class Actions:
         try:
             # Note there should be a dedicated ChatGPT window for all of this.
             # ChatGPT is so useful that's fine.
-            actions.user.focus(app_name="firefox", title=CHATGPT_TITLE)
+            actions.user.focus(app_name="chrome", title=CHATGPT_TITLE)
             sleep("200ms")
         except (IndexError, ui.UIErr) as e:
-            user.open_firefox()
+            user.open_chrome()
             # Open a new, dedicated ChatGPT window
             # FIXME: This is always starting a new window
             # key("ctrl-n")

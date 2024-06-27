@@ -42,6 +42,7 @@ panel control: user.vscode("workbench.panel.repl.view.focus")
 panel output: user.vscode("workbench.panel.output.focus")
 panel problems: user.vscode("workbench.panel.markers.view.focus")
 panel switch: user.vscode("workbench.action.togglePanel")
+pan switch: user.vscode("workbench.action.togglePanel")
 panel terminal: user.vscode("workbench.action.terminal.focus")
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
 
@@ -116,6 +117,7 @@ rename that: key(ctrl-shift-l)
 refactor that: user.vscode("editor.action.refactor")
 whitespace trim: user.vscode("editor.action.trimTrailingWhitespace")
 language switch: user.vscode("workbench.action.editor.changeLanguageMode")
+#! this might be useful
 refactor rename: user.vscode("editor.action.rename")
 refactor this: user.vscode("editor.action.refactor")
 
@@ -239,8 +241,8 @@ terminal split: user.vscode("workbench.action.terminal.split")
 terminal zoom: user.vscode("workbench.action.toggleMaximizedPanel")
 terminal trash: user.vscode("workbench.action.terminal.kill")
 terminal toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
-terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
-terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
+term upper: user.vscode("workbench.action.terminal.scrollUp")
+term downer: user.vscode("workbench.action.terminal.scrollDown")
 terminal <number_small>: user.vscode_terminal(number_small)
 
 #TODO: should this be added to linecommands?
@@ -284,25 +286,38 @@ preview markdown: user.vscode("markdown.showPreview")
 
 run script: key(ctr-shift-alt-r)
 
-#//TODO: make this automatically detect language
+# TODO: make this automatically detect language
 # Inserts a TODO comment
 todo comment:
-    insert("//TODO: ")
+    insert("TODO: ")
 
 # Inserts an Important comment
 important comment:
-    insert("//! ")
+    insert("! ")
 
 # Inserts a Question comment
 question comment:
-    insert("//? ")
+    insert("? ")
 
 # Inserts a Temporary comment
 temporary comment:
-    insert("//TEMP: ")
+    insert("TEMP: ")
 
 # Inserts an Information comment
 info comment:
-    insert("//* ")
+    insert("* ")
 
 term select: user.vscode("workbench.action.terminal.selectAll")
+term copy: 
+    user.vscode("workbench.action.terminal.selectAll")
+    key(ctrl-c)
+term clear: user.vscode("workbench.action.terminal.clear")
+term max: user.vscode("workbench.action.toggleMaximizedPanel")
+
+disk: key(ctrl-s)
+
+mat run: 
+    key(ctrl-s)
+    key(f5)
+repository open: key(ctrl-r)
+

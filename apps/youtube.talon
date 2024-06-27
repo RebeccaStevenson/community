@@ -1,7 +1,7 @@
 #tag: user.browser
 title: /youtube/
 # Homepage
-#title: YouTube/
+#title: youtube
 # Not every command will work on other players, but it's an easy way to enable
 # them.
 #title: /- Vimeo/
