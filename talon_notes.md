@@ -1,4 +1,7 @@
 # to do
+noisy timer
+focus matlab twenty twenty three
+launch matlab
 open top result for
 focus title statistics
 is there a way to always interpret enter as a command? Why is this indented?
@@ -66,6 +69,8 @@ panel switch-toggles down panel
 
 terms select
 
+## random
+
 toggle window info
 
 control shift c c
@@ -77,7 +82,6 @@ wrap switch bar switch- is there a way to always interpret enter as a command? W
 
 - bring me talon homepage/bring me talon website
 - mouse_smooth(xy)-copy mouse position
-- youtube hunt
 - debugger
 - clear way right/left, clear way down
 - go back

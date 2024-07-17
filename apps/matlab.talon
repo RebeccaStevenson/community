@@ -1,7 +1,9 @@
 os: windows
 and app.name: MATLAB R2019a
 os: windows
-and app.exe: MATLAB.exe
+and app.exe: matlab.exe
+os: windows
+and app.name: MATLAB R2023b
 -
 tag(): user.find_and_replace
 tag(): user.line_commands

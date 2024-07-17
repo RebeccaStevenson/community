@@ -5,6 +5,7 @@ window close: app.window_close()
 window hide: app.window_hide()
 focus <user.running_applications>: user.switcher_focus(running_applications)
 focus title <phrase>: user.switcher_focus_app_title("*", "{phrase}")
+code <phrase>: user.switcher_focus_app_title("Visual Studio Code", "{phrase}")
 win last: key(alt-tab)
 switch apps: key(super-tab)
 # following only works on windows. Can't figure out how to make it work for mac. No idea what the equivalent for linux would be.
