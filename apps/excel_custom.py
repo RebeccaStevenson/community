@@ -1,8 +1,7 @@
 from talon import ui, Module, Context, registry, actions, imgui, cron
 from typing import Optional
-from datetime import datetime, timedelta
-
-#   testing
+from datetime import datetime, timedelta, date
+    
 mod = Module()
 ctx = Context()
 
@@ -18,9 +17,8 @@ class Actions:
         """
         # Column headers extracted from the Excel sheet
         column_headers = [
-            'Unnamed: 0', 'WristEx', 'HandEx', 'TopStretch', 'TopMove', 'LegEx',
-            'AnkleEx', 'LowerStretch', 'LowerMove', 'Psoas', 'Walk', 'Cardio',
-            'One', 'WakeTime', 'Work', 'Tired', 'Stress', 'Mood'
+            'Unnamed: 0', 'WristEx', 'HandEx', 'LegEx', 'AnkleEx', 'TopStretch', 'LowerStretch', 'TopMove', 'LowerMove', 'Psoas', 'Walk', 'Cardio',
+            'One', 'WakeTime', 'Tired', 'Work', 'Tea',  'Stress', 'Mood', 'Pain', 'Notes', 'Notes2', 'Notes3'
         ]
         
         # Attempt to find the column name in the list of headers
@@ -44,7 +42,6 @@ class Actions:
         
         # Calculate the difference in days
         delta_days = (current_date - start_date).days
-
         # Assuming the first date starts at row 2 (considering a header row)
         row_number = 3 + delta_days
         return row_number
@@ -63,8 +60,7 @@ class Actions:
         actions.key("down:" + str(rowNumber - 2))
         actions.key("right:" + str(column_number - 1))
         actions.insert('')
-        # actions.key("right", rowNumber)
-        # actions.key("right", rowNumber)
+
     def go_column(column: str):
         """
         Navigates to a specific column in an excel shet based on the column name.
@@ -72,30 +68,21 @@ class Actions:
         column_number = actions.user.get_column_number(column)
         actions.key('home')
         actions.key("right:" + str(column_number - 1))
-        #actions.insert('1')
 
     def go_today():
         """
-        Navigates to a specific cell in an Excel sheet based on the column name and row number.
+        Navigates to the cell corresponding to the current date in an Excel sheet.
         """
-        rowNumber = actions.user.find_current_date_row_number()
-        actions.key('right')
-        actions.key('ctrl-home')
-        actions.key('down:' + str(rowNumber -2))
-        
-    # def go_today(column: str):
-    #     """
-    #     Navigates to a specific cell in an Excel sheet based on the column name and row number.
-        
-    #     :param column: The name of the column header.
-    #     :param row: The row number (1-based index).
-    #     """
-    #     # Get the column number based on the column name
-    #     column_number = actions.user.get_column_number(column)
-    #     rowNumber = actions.user.find_current_date_row_number()
-    #     actions.key('ctrl-home')
-    #     actions.key("down:" + str(rowNumber - 2))
-    #     actions.key("right:" + str(column_number - 1))
-    #     actions.insert('1')
-    #     # actions.key("right", rowNumber)
-    #     # actions.key("right", rowNumber)
+        # Calculate the row number for the current date
+        current_date = datetime.now().date()
+        sept_21 = date(current_date.year, 9, 21)
+        print(current_date)
+        print(sept_21)
+        days_difference = (current_date - sept_21).days
+        row_number = 207 + days_difference
+        print(row_number)
+
+        actions.key('ctrl-g')
+        actions.sleep('25ms')
+        actions.insert(f"B{row_number}")
+        actions.key("enter")

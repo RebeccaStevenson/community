@@ -321,3 +321,5 @@ mat run:
     key(f5)
 repository open: key(ctrl-r)
 
+
+sidebar: user.vscode("workbench.action.toggleSidebarVisibility")

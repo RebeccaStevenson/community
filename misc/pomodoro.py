@@ -7,8 +7,7 @@ from typing import Optional
 module = Module()
 
 # Additional variables for flashing control
-#//TODO: flash slower after five minutes, control with keyboard shortcut
-flash_duration = 2000 * 60  # 5 minutes in seconds
+flash_duration = 5 * 60  # 5 minutes in seconds
 flash_start_time = None
 
 lock = threading.Lock()
@@ -51,11 +50,11 @@ def check_pomodoro():
     global flash_start_time, finished
     with lock:
         if start_time and time.monotonic() > start_time + current_duration and not finished:
-            # Pomodoro finished, start flashing
+            # Pomodoro finished, start flashing and play sound
             finished = True
             flash_start_time = time.monotonic()
             delete_cancel_cron()
-            # actions.user.play_ding()
+            actions.user.play_ding()  # Play the ding sound
 
 @module.action_class
 class Actions:

@@ -76,17 +76,17 @@ stop script:
 
 
 # Debugging
-debug if error:
+debug start:
     key(ctrl-0)
     insert("dbstop if error")
     key(enter)
 
-clear debug:
+debug clear:
     key(ctrl-0)
     insert("dbclear all")
     key(enter)
 
-quit debugging: key(shift-f5)
+debug stopper: key(shift-f5)
 breakpoint: key(f12)
 disable breakpoint: key(ctrl-shift-b)
 clear breakpoints: key(ctrl-shift-c)
