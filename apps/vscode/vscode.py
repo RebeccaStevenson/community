@@ -35,6 +35,10 @@ and app.name: Visual Studio Code - Insiders
 os: windows
 and app.exe: Code.exe
 os: windows
+and app.exe: cursor.exe
+os: windows
+and app.name: Cursor
+os: windows
 and app.exe: Code-Insiders.exe
 os: windows
 and app.name: VSCodium
@@ -376,3 +380,4 @@ class UserActions:
         actions.edit.find(text)
         actions.sleep("100ms")
         actions.key("esc")
+

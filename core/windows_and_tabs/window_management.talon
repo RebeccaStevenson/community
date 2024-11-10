@@ -4,10 +4,7 @@ window last: app.window_previous()
 window close: app.window_close()
 window hide: app.window_hide()
 focus <user.running_applications>: user.switcher_focus(running_applications)
-focus title <phrase>: user.switcher_focus_app_title("*", "{phrase}")
-code <phrase>: user.switcher_focus_app_title("Visual Studio Code", "{phrase}")
-win last: key(alt-tab)
-switch apps: key(super-tab)
+
 # following only works on windows. Can't figure out how to make it work for mac. No idea what the equivalent for linux would be.
 focus$: user.switcher_menu()
 running list: user.switcher_toggle_running()
@@ -22,19 +19,3 @@ snap <user.running_applications> <user.window_snap_position>:
     user.snap_app(running_applications, window_snap_position)
 snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
-
-mat run: 
-    key(ctrl-s)
-    user.switcher_focus('matlab')
-    key(ctrl-shift-0)
-    key(f5)
-    key(ctrl-0)
-    #//TODO: run and debug mode, run line in matlab
-
-mat command: 
-    user.switcher_focus('matlab')
-    key(ctrl-0)
-
-mat editor: 
-    user.switcher_focus('matlab')
-    key(ctrl-shift-0)

@@ -1,4 +1,5 @@
 # to do
+use new line instead of enters
 noisy timer
 focus matlab twenty twenty three
 launch matlab
@@ -13,7 +14,9 @@ control shift c c
 ignore chuck row five
 
 # useful things
-works for VSCode too
+draft this works well in excel
+trip click dub click
+works for VSCode too:
 tab (last | previous): app.tab_previous()
 tab next: app.tab_next()
 tab (reopen | restore): app.tab_reopen()
