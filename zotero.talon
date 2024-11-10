@@ -28,6 +28,7 @@ copy items: key(ctrl-shift-c)
 
 # Navigation
 focus library: key(ctrl-shift-l)
+pan lib: key(ctrl-shift-l)
 next pane: key(tab)
 prev pane: key(shift-tab)
 next tab: key(ctrl-tab)
@@ -35,10 +36,26 @@ prev tab: key(ctrl-shift-tab)
 quick search: key(ctrl-shift-k)
 find: key(ctrl-f)
 
+pan switch:
+    key(tab)
+    sleep(1ms)
+    key(tab)
+    sleep(1ms)
+    key(tab)
+    sleep(1ms)
+    key(tab)
+    sleep(1ms)
+    key(tab)
+    sleep(1ms)
+    key(tab)
+    sleep(1ms)
+    key(tab)
+
 # Tabs
 next tab: key(ctrl-pagedown)
 prev tab: key(ctrl-pageup)
-tab <number>: key("ctrl-{number}")
+go tab <number>: key("ctrl-{number}")
+tab close: key(ctrl-w)
 
 # Searching
 find cols: key(ctrl:down)

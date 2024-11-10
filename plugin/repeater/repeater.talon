@@ -6,5 +6,4 @@ repeat that <number_small> [times]: core.repeat_command(number_small)
 
 (repeat phrase | again) [<number_small> times]:
     core.repeat_partial_phrase(number_small or 1)
-
 parrot(click): core.repeat_phrase(1)
