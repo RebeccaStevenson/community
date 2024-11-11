@@ -2,9 +2,6 @@
 cursor <phrase>: user.switcher_focus_app_title("Cursor", "{phrase}")
 title community: user.switcher_focus_app_title("Cursor", "community")
 
-win last: key(alt-tab)
-switch apps: key(super-tab)
-
 mat run: 
     key(ctrl-s)
     user.switcher_focus('matlab')

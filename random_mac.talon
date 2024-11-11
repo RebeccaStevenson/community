@@ -1,5 +1,5 @@
-win last: key(cmd-tab)
-switch apps: key(cmd-tab)
+os mac:
+-
 
 mat run: 
     key(cmd-s)
