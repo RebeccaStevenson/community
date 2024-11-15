@@ -72,5 +72,7 @@ class Actions:
 
     def open_file_custom(path: str):
         """Open a file"""
-
-        os.startfile(path, "open")
+        if actions.app.platform == "mac":
+            subprocess.run(["open", path])
+        else:  # windows
+            os.startfile(path, "open")

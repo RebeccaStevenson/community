@@ -22,6 +22,7 @@ code edit <user.system_path>:
     sleep(150ms)
     insert("code " + system_path)
     key(enter)
+    
 cursor edit <user.system_path>:
     key(cmd-r)
     sleep(150ms)
