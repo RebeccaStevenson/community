@@ -1,15 +1,16 @@
 app: Zotero
+os: mac
 -
 
 settings():
     key_hold = 100
 
 # Adding Items
-save: key(ctrl-shift-s)
-new item: key(ctrl-shift-n)
-new note: key(ctrl-shift-o)
-import: key(ctrl-shift-i)
-import clip: key(ctrl-shift-alt-i)
+save: key(cmd-shift-s)
+new item: key(cmd-shift-n)
+new note: key(cmd-shift-o)
+import: key(cmd-shift-i)
+import clip: key(cmd-shift-alt-i)
 
 # Editing
 add creator: key(shift-enter)
@@ -23,20 +24,20 @@ delete keep: key(delete)
 delete all: key(shift-delete)
 
 # Citations
-copy cite: key(ctrl-shift-a)
-copy items: key(ctrl-shift-c)
+copy cite: key(cmd-shift-a)
+copy items: key(cmd-shift-c)
 
 # Navigation
-focus library: key(ctrl-shift-l)
-pan lib: key(ctrl-shift-l)
+focus library: key(cmd-shift-l)
+pan lib: key(cmd-shift-l)
 next pane: key(tab)
 prev pane: key(shift-tab)
-next tab: key(ctrl-tab)
-prev tab: key(ctrl-shift-tab)
-quick search: key(ctrl-shift-k)
-find: key(ctrl-f)
+next tab: key(cmd-tab)
+prev tab: key(cmd-shift-tab)
+quick search: key(cmd-shift-k)
+find: key(cmd-f)
 
-pan switch:
+focus contents:
     key(tab)
     sleep(1ms)
     key(tab)
@@ -52,26 +53,26 @@ pan switch:
     key(tab)
 
 # Tabs
-next tab: key(ctrl-pagedown)
-prev tab: key(ctrl-pageup)
-go tab <number>: key("ctrl-{number}")
-tab close: key(ctrl-w)
+next tab: key(cmd-pagedown)
+prev tab: key(cmd-pageup)
+go tab <number>: key("cmd-{number}")
+tab close: key(cmd-w)
 
 # Searching
-find cols: key(ctrl:down)
+find cols: key(cmd:down)
 
 # Tags
-toggle tags: key(ctrl-shift-t)
+toggle tags: key(cmd-shift-t)
 tag <number>: key("{number}")
 
 # Feeds
-mark all: key(ctrl-shift-r)
-mark feed: key(ctrl-shift-`)
+mark all: key(cmd-shift-r)
+mark feed: key(cmd-shift-`)
 
 # Other
 expand: key(+)
 collapse: key(-)
-count: key(ctrl-a)
+count: key(cmd-a)
 rename col: key(f2)
 
 # PDF
@@ -80,20 +81,20 @@ pdf back: key(alt-left)
 pdf next: key(alt-right)
 
 # Notes
-bold: key(ctrl-b)
-italic: key(ctrl-i)
-underline: key(ctrl-u)
-select all: key(ctrl-a)
-undo: key(ctrl-z)
-redo: key(ctrl-y)
-cut: key(ctrl-x)
-copy: key(ctrl-c)
-paste: key(ctrl-v)
-paste plain: key(ctrl-shift-v)
+bold: key(cmd-b)
+italic: key(cmd-i)
+underline: key(cmd-u)
+select all: key(cmd-a)
+undo: key(cmd-z)
+redo: key(cmd-y)
+cut: key(cmd-x)
+copy: key(cmd-c)
+paste: key(cmd-v)
+paste plain: key(cmd-shift-v)
 head <number>: key("shift-alt-{number}")
 format para: key(shift-alt-7)
 format div: key(shift-alt-8)
 format addr: key(shift-alt-9)
-find replace: key(ctrl-f)
-insert link: key(ctrl-k)
+find replace: key(cmd-f)
+insert link: key(cmd-k)
 focus bar: key(alt-f10)

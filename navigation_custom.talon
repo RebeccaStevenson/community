@@ -1,11 +1,11 @@
-os mac:
+os: mac
 -
 
 win max: key(ctrl-cmd-f)
-
 win last: key(cmd-tab)
+bark: key(cmd-`)
 switch apps: key(cmd-shift-tab)
-spot | focus <user.text>:
+(spot) <user.text>:
     key(cmd-space)
     insert(text)
     key(enter)

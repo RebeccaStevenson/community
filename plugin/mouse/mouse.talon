@@ -112,3 +112,18 @@ copy mouse position: user.copy_mouse_position()
 curse no:
     # Command added 2021-12-13, can remove after 2022-06-01
     app.notify("Please activate the user.mouse_cursor_commands_enable tag to enable this command")
+
+# voice mode function in mouse.py
+voice mode:
+    key(alt-space)
+    sleep(0.3)
+    user.mouse_move_coordinate(934.4609375, 890.94140625)
+    ctrl.mouse_click(button=0)
+
+# voice mode function in mouse.py
+voice mode shared:
+    key(alt-space)
+    sleep(0.3)
+    user.mouse_move_coordinate(733.43359375, 652.2617187)
+    ctrl.mouse_click(button=0)
+

@@ -1,12 +1,10 @@
 # to do
 use new line instead of enters
 noisy timer
-focus matlab twenty twenty three
 launch matlab
 open top result for
 focus title statistics
 is there a way to always interpret enter as a command? Why is this indented?
-make enter stop formatting
 
 what is number small? change repeater to only use really small numbers
 control shift c c
@@ -14,6 +12,23 @@ control shift c c
 ignore chuck row five
 
 # useful things
+help search word
+snap full and lots of other locations
+super mode
+
+lisa: user.terminal_list_directories()
+lisa all: user.terminal_list_all_directories()
+katie [dir] [<user.text>]: user.terminal_change_directory(text or "")
+katie root: user.terminal_change_directory_root()
+katie (up | back): user.terminal_change_directory("..")
+go <user.system_path>: insert('cd "{system_path}"\n')
+path <user.system_path>: insert('"{system_path}"')
+(term clear | clear screen): user.terminal_clear_screen()
+run last: user.terminal_run_last()
+rerun [<user.text>]: user.terminal_rerun_search(text or "")
+kill all: user.terminal_kill_all()
+
+
 draft this works well in excel
 trip click dub click
 works for VSCode too:

@@ -219,6 +219,11 @@ class Actions:
         rect = ui.active_window().rect
         ctrl.mouse_move(rect.left + (rect.width / 2), rect.top + (rect.height / 2))
 
+    def mouse_move_coordinate(x: float, y: float):
+        """move the mouse cursor to the specified coordinates"""
+        ctrl.mouse_move(x, y)
+
+
 
 def show_cursor_helper(show):
     """Show/hide the cursor"""

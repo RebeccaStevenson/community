@@ -314,11 +314,12 @@ term copy:
 term clear: user.vscode("workbench.action.terminal.clear")
 term max: user.vscode("workbench.action.toggleMaximizedPanel")
 
-disk: key(ctrl-s)
+disk: user.vscode("workbench.action.files.save")
 
 mat run: 
-    key(ctrl-s)
+    user.vscode("workbench.action.files.save")
     key(f5)
+    
 repository open: key(ctrl-r)
 
 

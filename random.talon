@@ -57,6 +57,23 @@ add note <user.text>:
 [create] daily note <user.text>:
     user.create_or_append_date_note_text(text)
 
+(add | new) <user.system_path>:
+    user.open_file_custom(system_path)
+    sleep(200ms)
+    edit.file_start()
+    sleep(200ms)
+    user.insert_current_date("%A, %B %d, %Y")
+    key(enter:3)
+    key(up:2)
+
+(continue) <user.system_path>:
+    user.open_file_custom(system_path)
+    sleep(200ms)
+    edit.file_start()
+    sleep(200ms)
+    edit.line_insert_down()
+
+
 therapy note <user.text>:
     user.add_note_to_physical_therapy(text)
 

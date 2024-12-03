@@ -13,6 +13,9 @@ file quicklook: key(space)
 preview show: key(shift-cmd-p)
 disk eject: key(cmd-e)
 
+enter: key(cmd-down)
+cut paste: key(alt-cmd-v)
+
 # Navigation
 go computer: key(shift-cmd-c)
 go desktop: key(shift-cmd-d)

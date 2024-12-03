@@ -63,7 +63,8 @@ class WinActions:
 class MacActions:
     def edit_text_file(path):
         # -t means try to open in a text editor.
-        open_with_subprocess(path, ["/usr/bin/open", "-t", path])
+        # open_with_subprocess(path, ["/usr/bin/open", "-t", path])
+        subprocess.run(["open", path])
 
 
 @linuxctx.action_class("self")

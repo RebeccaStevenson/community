@@ -2,12 +2,13 @@ from datetime import datetime
 import os
 from pathlib import Path
 import subprocess
-from talon import Module, actions
+from talon import Module, actions, app
 
 NOTES_DIR = Path(__file__).parent / "notes"
 NOTES_DIR.mkdir(exist_ok=True)
 
 mod = Module()
+is_mac = app.platform == "mac"
 
 @mod.action_class
 class Actions:
@@ -72,7 +73,7 @@ class Actions:
 
     def open_file_custom(path: str):
         """Open a file"""
-        if actions.app.platform == "mac":
+        if is_mac:
             subprocess.run(["open", path])
         else:  # windows
             os.startfile(path, "open")

@@ -1,10 +1,13 @@
-from talon import ui, Module, Context, registry, actions, imgui, cron
+from talon import ui, Module, Context, registry, actions, imgui, cron, app
+import os
 from typing import Optional
 from datetime import datetime, timedelta, date
     
 mod = Module()
 ctx = Context()
 
+mod = Module()
+is_mac = app.platform == "mac"
 
 @mod.action_class
 class Actions:
@@ -46,6 +49,22 @@ class Actions:
         row_number = 3 + delta_days
         return row_number
 
+    def press_ctrl_home():
+        """Cross-platform ctrl+home"""
+        if is_mac:
+            actions.key('cmd-home')
+        else:
+            actions.key('ctrl-home')
+
+    def press_ctrl_g():
+        """Cross-platform ctrl+g"""
+        if is_mac:
+            actions.key('ctrl-g')
+            actions.sleep('25ms')   
+            actions.key('tab')
+        else:
+            actions.key('ctrl-g')
+
     def go_to_cell(column: str):
         """
         Navigates to a specific cell in an Excel sheet based on the column name and row number.
@@ -53,27 +72,25 @@ class Actions:
         :param column: The name of the column header.
         :param row: The row number (1-based index).
         """
-        # Get the column number based on the column name
         column_number = actions.user.get_column_number(column)
         rowNumber = actions.user.find_current_date_row_number()
-        actions.key('ctrl-home')
-        actions.key("down:" + str(rowNumber - 2))
-        actions.key("right:" + str(column_number - 1))
+        actions.user.press_ctrl_home()
+        actions.key('down:' + str(rowNumber - 2))
+        actions.key('right:' + str(column_number - 1))
         actions.insert('')
 
     def go_column(column: str):
         """
-        Navigates to a specific column in an excel shet based on the column name.
+        Navigates to a specific column in an excel sheet based on the column name.
         """
         column_number = actions.user.get_column_number(column)
         actions.key('home')
-        actions.key("right:" + str(column_number - 1))
+        actions.key('right:' + str(column_number - 1))
 
     def go_today():
         """
         Navigates to the cell corresponding to the current date in an Excel sheet.
         """
-        # Calculate the row number for the current date
         current_date = datetime.now().date()
         sept_21 = date(current_date.year, 9, 21)
         print(current_date)
@@ -82,7 +99,7 @@ class Actions:
         row_number = 207 + days_difference
         print(row_number)
 
-        actions.key('ctrl-g')
+        actions.user.press_ctrl_g()
         actions.sleep('25ms')
-        actions.insert(f"B{row_number}")
-        actions.key("enter")
+        actions.insert(f'B{row_number}')
+        actions.key('enter')

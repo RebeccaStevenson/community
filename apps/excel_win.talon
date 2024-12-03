@@ -1,3 +1,4 @@
+os: win
 app: excel
 app: Microsoft Excel
 -
