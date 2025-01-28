@@ -39,11 +39,15 @@ status focus: key(ctrl-f8)
 show menu: key(ctrl-.)
 
 # Password Manager Commands
+(password | pass) fill: key(cmd-backslash)
+(password | pass) lock: key(shift-cmd-l)
+(password | pass) show: key(shift-cmd-space)
+
 password manager: key(shift-cmd-x)
-password lock: key(shift-cmd-l)
 
 # Speechify Commands
 speech start: key(alt-5)
+
 speech screenshot: key(ctrl-cmd-r)
 speech play: key(alt-q)
 speech play alt: key(alt-a)

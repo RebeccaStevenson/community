@@ -255,7 +255,7 @@ simple_keys = [
 
 alternate_keys = {
     "backspace": "backspace",
-    "wipe": "backspace",
+    # "wipe": "backspace",
     #"delete": "backspace",
     #'junk': 'backspace',
     "delete": "delete",

@@ -1,4 +1,5 @@
 app: chrome
+os: windows
 -
 # testing testing: user.chatgpt_switch_start()
 

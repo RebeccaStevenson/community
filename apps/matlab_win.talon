@@ -119,7 +119,7 @@ previous:
 
 next section:
     key(ctrl-down)
-next section:
+previous section:
     key(ctrl-up)
     
 

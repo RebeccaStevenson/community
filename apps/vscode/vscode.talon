@@ -111,9 +111,9 @@ imports fix: user.vscode("editor.action.organizeImports")
 problem next: user.vscode("editor.action.marker.nextInFiles")
 problem last: user.vscode("editor.action.marker.prevInFiles")
 problem fix: user.vscode("problems.action.showQuickFixes")
-# rename doesn't work with matlab, change to shortcut for now
-# rename that: user.vscode("editor.action.rename")
-rename that: key(ctrl-shift-l)
+# # rename doesn't work with matlab, change to shortcut for now
+# # rename that: user.vscode("editor.action.rename")
+# rename that: key(ctrl-shift-l)
 refactor that: user.vscode("editor.action.refactor")
 whitespace trim: user.vscode("editor.action.trimTrailingWhitespace")
 language switch: user.vscode("workbench.action.editor.changeLanguageMode")
@@ -284,7 +284,6 @@ cell run: user.vscode("notebook.cell.execute")
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
 
-run script: key(ctr-shift-alt-r)
 
 # TODO: make this automatically detect language
 # Inserts a TODO comment
@@ -308,19 +307,9 @@ info comment:
     insert("* ")
 
 term select: user.vscode("workbench.action.terminal.selectAll")
-term copy: 
-    user.vscode("workbench.action.terminal.selectAll")
-    key(ctrl-c)
 term clear: user.vscode("workbench.action.terminal.clear")
 term max: user.vscode("workbench.action.toggleMaximizedPanel")
 
 disk: user.vscode("workbench.action.files.save")
-
-mat run: 
-    user.vscode("workbench.action.files.save")
-    key(f5)
-    
-repository open: key(ctrl-r)
-
 
 sidebar: user.vscode("workbench.action.toggleSidebarVisibility")

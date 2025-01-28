@@ -18,3 +18,4 @@ mode: all
 ^(talon wake)+$: speech.enable()
 ^(stop listening)+$: speech.enable()
 go to sleep: skip()
+wake up: skip()

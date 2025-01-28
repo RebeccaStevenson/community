@@ -70,7 +70,7 @@ add note <user.text>:
     user.open_file_custom(system_path)
     sleep(200ms)
     edit.file_start()
-    sleep(200ms)
+    sleep(200ms)    
     edit.line_insert_down()
 
 
