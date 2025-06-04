@@ -7,12 +7,12 @@ tag(): user.splits
 tag(): user.emoji
 
 pop daily note:
-    key(ctrl-p)
+    key(cmd-p)
     insert('today daily note')
     key(enter)
 
 pop [<user.text>] [{user.file_extension}]:
-    key(ctrl-o)
+    key(cmd-o)
     edit.delete_line()
     sleep(100ms)
     insert(text or "")
@@ -20,7 +20,7 @@ pop [<user.text>] [{user.file_extension}]:
     sleep(300ms)
 
 please [<user.text>]:
-    key(ctrl-p)
+    key(cmd-p)
     edit.delete_line()
     insert(text or "")
 
@@ -56,7 +56,7 @@ rack (show | hide | dog) | (show | hide) (rack | calendar):
     key(alt-c)
 
 task (dog | check | uncheck | complete):
-    key(ctrl-l)
+    key(cmd-l)
 
-show (help | settings):     key(ctrl-,)
-add (prop | tag):           key(ctrl-;)
+show (help | settings):     key(cmd-,)
+add (prop | tag):           key(cmd-;)

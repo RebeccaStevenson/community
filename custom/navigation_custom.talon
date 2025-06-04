@@ -3,12 +3,15 @@ os: mac
 
 win max: key(ctrl-cmd-f)
 win last: key(cmd-tab)
-bark: key(cmd-`)
+(bark | win last): key(cmd-`)
 switch apps: key(cmd-shift-tab)
 (spot) <user.text>:
     key(cmd-space)
     insert(text)
     key(enter)
+
+page up: key(pageup)
+page down: key(pagedown)
 
 # Spotlight Navigation
 spot show: key(cmd-space)

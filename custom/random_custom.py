@@ -2,16 +2,37 @@ from datetime import datetime
 import os
 from pathlib import Path
 import subprocess
-from talon import Module, actions, app
+from talon import Module, actions, app, Context
 
-NOTES_DIR = Path(__file__).parent / "notes"
-NOTES_DIR.mkdir(exist_ok=True)
+NOTES_DIR = Path("/Users/rebec/Library/CloudStorage/Dropbox/DropboxDocuments/notes")
+# NOTES_DIR.mkdir(exist_ok=True)
 
 mod = Module()
 is_mac = app.platform == "mac"
 
 @mod.action_class
 class Actions:
+    def maybe_disable_speech_for_notes(path: str):
+        """Conditionally run commands if the file is notes.md"""
+        # Extract the filename using os.path.basename
+        filename = os.path.basename(path)
+        
+        # Check if the filename is notes.md
+        if filename == "journal.md" or filename == "physical_therapy_daily.md":
+            # Insert date formatting
+            actions.user.insert_current_date("%A, %B %d, %Y")
+            actions.sleep("200ms")
+            actions.key("enter:3")
+            actions.sleep("200ms")
+            actions.key("up:2")
+            actions.sleep("100ms")
+            
+            actions.speech.disable()
+            actions.key("alt-cmd-r")
+        else:
+            actions.key("enter:2")
+            actions.key("up:2")
+    
     def create_note():
         """Create a new note"""
         curtime = datetime.now().strftime("%Y-%m-%d-%H%M%S")
@@ -22,13 +43,13 @@ class Actions:
         print(f"Opening note at {file_path}")
         os.startfile(file_path, "open")
                 
-    def edit_note(file_name: str):
-        """Edit an existing note"""
-        file_path = NOTES_DIR / file_name
-        if file_path.exists():
-            edit_file(file_path)
-        else:
-            actions.app.notify(f"Note {file_name} does not exist.")
+    # def edit_note(file_name: str):
+    #     """Edit an existing note"""
+    #     file_path = NOTES_DIR / file_name
+    #     if file_path.exists():
+    #         edit_file(file_path)
+    #     else:
+    #         actions.app.notify(f"Note {file_name} does not exist.")
 
     def append_to_daily_note_text(text: str):
         """Append provided text to daily note"""

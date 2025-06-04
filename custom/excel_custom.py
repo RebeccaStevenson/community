@@ -75,7 +75,7 @@ class Actions:
         column_number = actions.user.get_column_number(column)
         rowNumber = actions.user.find_current_date_row_number()
         actions.user.press_ctrl_home()
-        actions.key('down:' + str(rowNumber - 2))
+        actions.key('{down:' + str(rowNumber - 2))
         actions.key('right:' + str(column_number - 1))
         actions.insert('')
 
@@ -90,16 +90,10 @@ class Actions:
     def go_today():
         """
         Navigates to the cell corresponding to the current date in an Excel sheet.
+        Uses the same date calculation logic as find_current_date_row_number.
         """
-        current_date = datetime.now().date()
-        sept_21 = date(current_date.year, 9, 21)
-        print(current_date)
-        print(sept_21)
-        days_difference = (current_date - sept_21).days
-        row_number = 207 + days_difference
-        print(row_number)
-
+        row_number = actions.user.find_current_date_row_number()
         actions.user.press_ctrl_g()
-        actions.sleep('25ms')
+        actions.sleep('50ms')  # Increased sleep time for reliability
         actions.insert(f'B{row_number}')
         actions.key('enter')

@@ -8,8 +8,9 @@ zoom in: key("cmd-alt-=")
 zoom out: key("cmd-alt--")
 
 go <user.letter> <user.number_string>:
-    key(cmd-g)
+    key(ctrl-g)
     sleep(25ms)
+    key(tab)
     insert(letter + number_string)
     key("enter")
 

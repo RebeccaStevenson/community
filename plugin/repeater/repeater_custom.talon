@@ -2,5 +2,5 @@
 <number_small>: core.repeat_command(number_small - 1)
 
 # parrot(click): core.repeat_phrase(1)
-# key(ctrl-alt-shift-cmd-;): core.repeat_phrase(1)
+key(ctrl-alt-shift-cmd-;): core.repeat_phrase(1)
     

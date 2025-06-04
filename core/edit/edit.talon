@@ -79,11 +79,11 @@ clear down:
 
 clear word: edit.delete_word()
 
-clear word left:
+(clear word left | cleave):
     edit.extend_word_left()
     edit.delete()
 
-clear word right:
+(clear word right | reeve):
     edit.extend_word_right()
     edit.delete()
 

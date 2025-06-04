@@ -12,6 +12,7 @@ info show: key(cmd-i)
 file quicklook: key(space)
 preview show: key(shift-cmd-p)
 disk eject: key(cmd-e)
+file trash: key(cmd-backspace)
 
 enter: key(cmd-down)
 cut paste: key(alt-cmd-v)

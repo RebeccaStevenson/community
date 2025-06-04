@@ -14,6 +14,8 @@ os: mac
 and app.bundle: com.visualstudio.code.oss
 os: mac
 and app.name: Cursor
+os: mac
+and app.name: Windsurf
 """
 mod.apps.vscode = """
 os: linux

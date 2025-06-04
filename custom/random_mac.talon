@@ -12,13 +12,13 @@ mat editor:
 
 code edit <user.system_path>:
     user.switcher_focus('terminal')
-    sleep(150ms)
+    sleep(200ms)
     insert("code " + system_path)
     key(enter)
     
 cursor edit <user.system_path>:
     user.switcher_focus('terminal')
-    sleep(150ms)
+    sleep(200ms)
     insert("cursor " + system_path)
     key(enter)
 
