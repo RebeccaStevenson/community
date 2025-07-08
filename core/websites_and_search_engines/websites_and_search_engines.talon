@@ -13,12 +13,3 @@ open paste: user.open_url(clip.text())
 #! does not work
 #open top result for <user.text>:
     #user.open_top_google_search(text)
-
-# chat <user.text>:
-#    user.open_url("https://chatgpt.com/")
-#     sleep(500ms)
-#    user.switcher_focus("chrome")
-#    sleep(500ms)
-    #key(shift-esc)
-    #sleep(500ms)
-    #insert(text)

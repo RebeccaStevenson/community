@@ -1,35 +1,36 @@
 app: cursor
-os: mac
 -
 
-# Composer commands
-compose: key(cmd-i)
-compose full: key(alt-cmd-shift-i)
+# Chat Commands
+(chat | compose): key(cmd-l)
+chat agent new open: user.vscode("composer.newAgentChat")
+chat cancel: user.vscode("composer.cancelComposerStep")
+chat stop: key(shift-cmd-backspace)
+chat reject: key(shift-cmd-backspace)
+chat editor: user.vscode("composer.openChatAsEditor")
+chat panel: key(shift-alt-cmd-r)
+chat error: user.vscode("composer.fixerrormessage")
+chat followup focus: key(cmd-y)
+chat new: user.vscode("composer.createNewWithPrevContext")
+chat pane: key(cmd-shift-d)
+chat context: key(cmd-shift-g)
+chat mode: key(cmd-.)
+mode switch: key(cmd-.)
+model switch: key(alt-cmd-/)
+chat next: key(alt-l)
+review next: key(alt-l)
+# Tab Management
+# tab close: user.vscode("composer.closeComposerTab")
+# tab new: user.vscode("composer.createNewComposerTab")
+# tab next: user.vscode("composer.nextChatTab")
+# tab previous: user.vscode("composer.previousChatTab")
 
-# AI Pane commands
-chat: key(cmd-l)
-chat full: key(alt-cmd-shift-l)
-ai context: key(cmd-shift-l)
-
-# Inline editing
-inline: key(cmd-k)
+# Inline Editing Commands
 ask: key(alt-enter)
 cancel inline: key(escape)
 
-chat cancel: key(cmd-ctrl-backspace)
-# tab close: key(cmd-w)
-chat followup focus: key(cmd-y)
-chat error investigate: key(cmd-shift-d)
-chat new: key(cmd-n)
-# tab new: key(cmd-t)
-# tab next: key(cmd-])
-# tab previous: key(cmd-[)
-menu context add open: key(alt-cmd-p)
-chat open: key(cmd-i)
-menu mode chat open: key(alt-cmd-period)
-edit open: key(cmd-k)
-toggle model open: key(alt-cmd-slash)
-chat agent new open: key(cmd-shift-i)
-issue report: key(alt-shift-r)
-context chat toggle: key(cmd-shift-g)
-editor open toggle: key(cmd-shift-d)
+# Model switching with list
+model switch {user.cursor_model}:
+    key(alt-cmd-/)
+    sleep(150ms)
+    insert(cursor_model)

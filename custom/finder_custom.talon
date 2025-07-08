@@ -13,6 +13,7 @@ file quicklook: key(space)
 preview show: key(shift-cmd-p)
 disk eject: key(cmd-e)
 file trash: key(cmd-backspace)
+path copy: key(cmd-alt-c)
 
 enter: key(cmd-down)
 cut paste: key(alt-cmd-v)
