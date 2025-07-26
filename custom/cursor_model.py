@@ -15,4 +15,6 @@ ctx.lists["user.cursor_model"] = {
     "opus": "opus",
     "gpt": "gpt-4.1",
     "gpt four": "gpt-4.1",
+    "max": "max",
+    "auto": "auto",
 }

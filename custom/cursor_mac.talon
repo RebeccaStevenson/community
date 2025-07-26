@@ -1,6 +1,5 @@
 app: cursor
 -
-
 # Chat Commands
 (chat | compose): key(cmd-l)
 chat agent new open: user.vscode("composer.newAgentChat")
@@ -34,3 +33,5 @@ model switch {user.cursor_model}:
     key(alt-cmd-/)
     sleep(150ms)
     insert(cursor_model)
+    sleep(150ms)
+    key(enter)

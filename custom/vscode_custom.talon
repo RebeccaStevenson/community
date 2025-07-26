@@ -23,3 +23,8 @@ split editor orthogonal: user.vscode("workbench.action.splitEditorOrthogonal")
 toggle split layout: user.vscode("workbench.action.toggleEditorGroupLayout")
 close group: user.vscode("workbench.action.closeGroup")
 join group: user.vscode("workbench.action.joinEditorInGroup") 
+
+# MATLAB batch command template
+mat batch:
+    insert("matlab -batch 'run('')'")
+    key(left left) 
